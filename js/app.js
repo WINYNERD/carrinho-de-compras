@@ -14,8 +14,9 @@ function adicionar() {
     </section>`;
     totalGeral = totalGeral + precoTotal;
     valorGeral.innerHTML = `<span class="texto-azul" id="valor-total">R$${totalGeral}</span>`;
-    console.log(totalGeral)
-    console.log(valorGeral)
+    console.log(totalGeral);
+    console.log(valorGeral);
+    limpaQuantidade()
 }
 
 function limpar() {
@@ -25,7 +26,13 @@ function limpar() {
     valorGeral.innerHTML = `R$${totalGeral}`;
     console.log(totalGeral)
     console.log(valorGeral)
+    limpaQuantidade()
 }
+
+function limpaQuantidade() {
+    document.getElementById('quantidade').value = '';
+}
+
 
 // FUNCOES CHAMADAS QUANDO INICIA
 limpar();
